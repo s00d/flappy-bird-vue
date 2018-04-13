@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "Pavel <virus191288@gmail.com>",
+  "homepage": "https://github.com/s00d/flappy-bird-vue/",
   "private": true,
+  "wst": "/docs/",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",

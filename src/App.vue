@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <audio loop="loop" src='/static/sound/bgm.mp3' preload='preload' autoplay="autoplay"></audio>
+    <audio loop="loop" src='./static/sound/bgm.mp3' preload='preload' autoplay="autoplay"></audio>
     <div class="bkg-main" @click="upperBird">
       <div class="score">Record: {{ game.score }}</div>
       <div class="score-max">Max: {{ max }}</div>
@@ -134,7 +134,7 @@ export default {
      let events = ['fly', 'die', 'score', 'hit']
      events.forEach(event => {
         let el = document.createElement('audio');
-        el.src = '/static/sound/' + event + '.mp3';
+        el.src = './static/sound/' + event + '.mp3';
         el.preload = 'preload';
         this.eventCallback[event] = function () {
           el.pause();

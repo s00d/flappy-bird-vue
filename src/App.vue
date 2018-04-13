@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <audio loop="loop" src='/static/bgm.mp3' preload='preload' autoplay="autoplay"></audio>
+    <audio loop="loop" src='/static/sound/bgm.mp3' preload='preload' autoplay="autoplay"></audio>
     <div class="bkg-main" @click="upperBird">
       <div class="score">Record: {{ game.score }}</div>
       <div class="score-max">Max: {{ max }}</div>
@@ -134,7 +134,7 @@ export default {
      let events = ['fly', 'die', 'score', 'hit']
      events.forEach(event => {
         let el = document.createElement('audio');
-        el.src = '/static/' + event + '.mp3';
+        el.src = '/static/sound/' + event + '.mp3';
         el.preload = 'preload';
         this.eventCallback[event] = function () {
           el.pause();
@@ -155,7 +155,7 @@ export default {
 .bkg {
   /* width: 100%; */
   height: 505px;
-  background-image: url(./assets/background.png);
+  background-image: url(/static/img/background.png);
   border: 3px solid green;
   position: absolute;
 }
@@ -170,13 +170,13 @@ export default {
 }
 
 .bird-0 {
-    background: url(./assets/bird1.png) 50% 50% no-repeat;
+    background: url(/static/img/bird1.png) 50% 50% no-repeat;
 }
 .bird-1 {
-    background: url(./assets/bird2.png) 50% 50% no-repeat;
+    background: url(/static/img/bird2.png) 50% 50% no-repeat;
 }
 .bird-2 {
-    background: url(./assets/bird3.png) 50% 50% no-repeat;
+    background: url(/static/img/bird3.png) 50% 50% no-repeat;
 }
 
 .pipe-group {
@@ -199,13 +199,13 @@ export default {
 
 .pipe-top {
   /* background-color: red; */
-  background: url("./assets/pipe_down.png") bottom no-repeat;
+  background: url(/static/img/pipe_down.png) bottom no-repeat;
   background-size: cover;
 }
 
 .pipe-bottom {
   /* background-color: red; */
-  background: url("./assets/pipe_up.png") no-repeat;
+  background: url(/static/img/pipe_up.png) no-repeat;
   background-size: cover;
 }
 .space {

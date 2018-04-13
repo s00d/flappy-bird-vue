@@ -127,9 +127,6 @@ export default {
     this.$set(this, 'game', JSON.parse(JSON.stringify(this.defoult)))
   },
   mounted () {
-    this.addPipe();
-    setInterval(this.gameLoop, 30);
-    setInterval(this.addPipe, 1000);
 
      let events = ['fly', 'die', 'score', 'hit']
      events.forEach(event => {
@@ -142,6 +139,12 @@ export default {
           el.play();
         };
      });
+
+     setTimeout(() => {
+      this.addPipe();
+      setInterval(this.gameLoop, 30);
+      setInterval(this.addPipe, 1000);
+     }, 1000)
   }
 }
 </script>

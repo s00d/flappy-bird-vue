@@ -155,7 +155,7 @@ export default {
 .bkg {
   /* width: 100%; */
   height: 505px;
-  background-image: url(/static/img/background.png);
+  background-image: url(./assets/background.png);
   border: 3px solid green;
   position: absolute;
 }
@@ -170,13 +170,23 @@ export default {
 }
 
 .bird-0 {
-    background: url(/static/img/bird1.png) 50% 50% no-repeat;
+    background: url(./assets/bird1.png) 50% 50% no-repeat;
 }
 .bird-1 {
-    background: url(/static/img/bird2.png) 50% 50% no-repeat;
+    background: url(./assets/bird2.png) 50% 50% no-repeat;
 }
 .bird-2 {
-    background: url(/static/img/bird3.png) 50% 50% no-repeat;
+    background: url(./assets/bird3.png) 50% 50% no-repeat;
+}
+
+.pipe-top {
+  background: url(./assets/pipedown.png) bottom no-repeat;
+  background-size: cover;
+}
+
+.pipe-bottom {
+  background: url(./assets/pipeup.png) no-repeat;
+  background-size: cover;
 }
 
 .pipe-group {
@@ -197,17 +207,6 @@ export default {
   position: absolute;
 }
 
-.pipe-top {
-  /* background-color: red; */
-  background: url(/static/img/pipe_down.png) bottom no-repeat;
-  background-size: cover;
-}
-
-.pipe-bottom {
-  /* background-color: red; */
-  background: url(/static/img/pipe_up.png) no-repeat;
-  background-size: cover;
-}
 .space {
   height: 20px;
 }
